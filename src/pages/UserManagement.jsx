@@ -158,7 +158,7 @@ const UserManagement = () => {
                                                 value={user.roles?.[0]?.roleId?._id || ''}
                                                 onChange={(e) => handleAssignRole(user._id, e.target.value)}
                                                 className="table-select"
-
+                                                disabled={currentUser?._id === user._id}
                                             >
                                                 <option value="">No Role</option>
                                                 {roles.map((role) => (
